@@ -1,3 +1,4 @@
+# install apache,gitweb,perl_uri
 Listen 8010
 
 LoadModule cgi_module /usr/lib/apache2/mod_cgi.so
