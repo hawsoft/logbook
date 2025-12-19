@@ -1,4 +1,7 @@
 # install apache,gitweb,perl_uri
+
+# change /etc/apache2/apache2.conf
+```
 Listen 8010
 
 LoadModule cgi_module /usr/lib/apache2/mod_cgi.so
@@ -23,3 +26,10 @@ Group root
     AuthUserFile /git-repo/userfile
     Require valid-user
 </Location>
+```
+
+# change /www/cgi-bin/gitweb.cgi
+
+```
+our $projectroot = "/git-repo/projects";
+```
