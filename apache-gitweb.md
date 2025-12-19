@@ -6,9 +6,6 @@ LoadModule cgi_module /usr/lib/apache2/mod_cgi.so
 User nobody
 Group root
 
-SetEnv GIT_PROJECT_ROOT /git-repo/projects
-SetEnv GIT_HTTP_EXPORT_ALL
-
 <IfModule alias_module>
     ScriptAlias /git "/www/cgi-bin/gitweb.cgi"
     ScriptAlias /repo/ /usr/lib/git-core/git-http-backend/
