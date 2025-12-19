@@ -11,7 +11,7 @@ SetEnv GIT_HTTP_EXPORT_ALL
 
 <IfModule alias_module>
     ScriptAlias /git "/www/cgi-bin/gitweb.cgi"
-    ScriptAlias /repo /usr/lib/git-core/git-http-backend
+    ScriptAlias /repo/ /usr/lib/git-core/git-http-backend/
 </IfModule>
 
 <Directory "/www">
