@@ -1,6 +1,7 @@
-# install apache,gitweb,perl_uri
+# setup gitweb
+### 1.install apache,gitweb,perl_uri
 
-# change /etc/apache2/apache2.conf
+### 2.change /etc/apache2/apache2.conf
 ```
 Listen 8010
 
@@ -28,8 +29,23 @@ Group root
 </Location>
 ```
 
-# change /www/cgi-bin/gitweb.cgi
+### 3.change /www/cgi-bin/gitweb.cgi
 
 ```
 our $projectroot = "/git-repo/projects";
+```
+
+# setup file share
+
+### 1.change /etc/apache2/apache2.conf
+```
+<IfModule alias_module>
+    Alias /files/ "/mnt/sda1/web-files/"
+</IfModule>
+
+<Directory "/mnt/sda1/web-files/">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
 ```
